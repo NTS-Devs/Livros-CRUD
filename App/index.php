@@ -1,5 +1,6 @@
 <?php
 
+include "Config.php";
 include "Controller/LivroController.php";
 
 // Pega os parametros passados pela URL
@@ -15,6 +16,17 @@ switch ($url) {
         echo "Lista Livros";
         break;
 
+    case "/Site-Lweb/App/livros/form":
+        LivroController::form();
+        break;
+
+    case "/Site-Lweb/App/livros/form/save":
+        LivroController::save();
+        break;
+
+    case "/Site-Lweb/App/livros/delete":
+        echo "Deleta Livros";
+            break; 
     default:
         echo "Erro 404 - Rota não encontrada";
         break;
