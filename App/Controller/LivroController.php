@@ -1,6 +1,16 @@
 <?php 
 
 class LivroController {
+
+  public static function index() {
+    include 'Model/LivroModel.php';
+
+    $model = new LivroModel();
+    $model->getAllRows();
+
+    include 'View/Modules/Livro/ListaLivro.php';
+  }
+  
   public static function form() {
     include 'Model/LivroModel.php';
 

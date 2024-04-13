@@ -13,7 +13,7 @@ switch ($url) {
         break;
 
     case "/Site-Lweb/App/livros":
-        echo "Lista Livros";
+        LivroController::index();
         break;
 
     case "/Site-Lweb/App/livros/form":

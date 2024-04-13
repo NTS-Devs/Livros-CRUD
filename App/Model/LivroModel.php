@@ -27,7 +27,7 @@ class LivroModel {
     $dao = new LivroDAO();
 
     // Armazena os dados do MySQL
-    // $this->rows = $dao->select();
+    $this->rows = $dao->select();
   }
 
 }
