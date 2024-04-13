@@ -9,7 +9,7 @@ $url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 // Estrutura de decisao para chamada das rotas
 switch ($url) {
     case "/Site-Lweb/App/":
-        echo "Pagina inicial";
+        LivroController::index();
         break;
 
     case "/Site-Lweb/App/livros":
