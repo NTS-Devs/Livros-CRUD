@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html>
+<?php
 
-<body>
+include "Controller/LivroController.php";
 
-    <?php
-    echo "Teste";
-    ?>
+// Pega os parametros passados pela URL
+$url = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
 
-</body>
+// Estrutura de decisao para chamada das rotas
+switch ($url) {
+    case "/Site-Lweb/App/":
+        echo "Pagina inicial";
+        break;
 
-</html>
+    case "/Site-Lweb/App/livros":
+        echo "Lista Livros";
+        break;
+
+    default:
+        echo "Erro 404 - Rota não encontrada";
+        break;
+}
