@@ -12,8 +12,9 @@ class LivroController {
   }
   
   public static function form() {
-    include 'Model/LivroModel.php';
 
+    include 'Model/LivroModel.php';
+    
     $model = new LivroModel();
 
     include 'View/Modules/Livro/FormLivro.php';

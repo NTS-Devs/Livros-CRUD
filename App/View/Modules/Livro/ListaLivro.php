@@ -37,6 +37,7 @@
         <tr>
           <td><?= $livro->ID ?></td>
           <td><?= $livro->titulo ?></td>
+
           <td><?= $livro->autor ?></td>
           <td><?= $livro->data_publicacao ?></td>
         </tr>
