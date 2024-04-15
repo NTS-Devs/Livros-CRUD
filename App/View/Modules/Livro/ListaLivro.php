@@ -30,6 +30,7 @@
         <th>Título</th>
         <th>Autor</th>
         <th>Data de Publicação</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -40,6 +41,15 @@
 
           <td><?= $livro->autor ?></td>
           <td><?= $livro->data_publicacao ?></td>
+          <td>
+            
+            <a href="/Site-Lweb/App/livros/form?id=<?= $livro->ID ?>">
+              <button>Editar</button>
+            </a>
+            <a href="/Site-Lweb/App/livros/delete?id=<?= $livro->ID ?>">
+              <button>Deletar</button>
+            </a>
+          </td>
         </tr>
       <?php } ?>
     </tbody>
