@@ -36,6 +36,15 @@ Este repositório conta um simples CRUD que registra livros. Ele foi desenvolvid
 
 6. Se tudo ocorreu corretamente, você será redirecionado para a página inicial
 
+## Telas
+
+### Computador
+![Computador](/Git_Files/pc.gif)
+
+
+### Mobile
+![Mobile](/Git_Files/mobile.gif)
+
 ## Estrutura do Projeto
 
 ```
