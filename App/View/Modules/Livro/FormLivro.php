@@ -26,10 +26,11 @@
   <fieldset>
     <h2>Cadastro de Livros</h2>
 
-    <form method="post" action="<?php echo BASE_URL ?>/livros/form/save">
+    <form method="post" action="<?= BASE_URL ?>/livros/form/save">
+      <input type="hidden" value="<?= $model->id ?>" name="id">
+
       <label for="titulo">Titulo: </label>
       <input value="<?= $model->titulo ?>" type="text" name="titulo" id="titulo" required>
-
 
       <label for="autor">Autor: </label>
       <input value="<?= $model->autor ?>" type="text" name="autor" id="autor" required>

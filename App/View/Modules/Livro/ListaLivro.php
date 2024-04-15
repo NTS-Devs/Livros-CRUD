@@ -19,6 +19,11 @@
     table {
       width: 85%;
     }
+
+    .warning {
+      border: #E61907;
+      background-color: #E12E1E;
+    }
   </style>
 </head>
 
@@ -41,17 +46,29 @@
 
           <td><?= $livro->autor ?></td>
           <td><?= $livro->data_publicacao ?></td>
-          <td>
-            
-            <a href="/Site-Lweb/App/livros/form?id=<?= $livro->ID ?>">
-              <button>Editar</button>
-            </a>
-            <a href="/Site-Lweb/App/livros/delete?id=<?= $livro->ID ?>">
-              <button>Deletar</button>
-            </a>
+          <td class="grid">
+            <div>
+              <a href="<?= BASE_URL ?>/livros/form?id=<?= $livro->ID ?>">
+                <button>Editar</button>
+              </a>
+            </div>
+
+            <div>
+              <a href="<?= BASE_URL ?>/livros/delete?id=<?= $livro->ID ?>">
+                <button class="warning">Deletar</button>
+              </a>
+            </div>
+
           </td>
         </tr>
       <?php } ?>
+
+      <?php if (count($model->rows) == 0) { ?>
+        <tr>
+          <td colspan="5">Nenhum registro encontrado</td>
+        </tr>
+      <?php } ?>
+
     </tbody>
   </table>
 </body>
