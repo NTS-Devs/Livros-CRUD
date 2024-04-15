@@ -16,11 +16,25 @@
     }
 
     table {
-      width: 85%;
+      width: 90%;
+    }
+
+    th,
+    td {
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .grid {
+      margin: 10px;
+    }
+
+    button {
+      border: 0;
+      padding: 10px;
     }
 
     .warning {
-      border: #E61907;
       background-color: #E12E1E;
     }
   </style>
@@ -45,19 +59,21 @@
 
           <td><?= $livro->autor ?></td>
           <td><?= $livro->data_publicacao ?></td>
-          <td class="grid">
-            <div>
-              <a href="<?= BASE_URL ?>/livros/form?id=<?= $livro->id ?>">
-                <button>Editar</button>
-              </a>
-            </div>
+          <td>
+            <div class="grid">
+              <div>
+                <a href="<?= BASE_URL ?>/livros/form?id=<?= $livro->id ?>">
+                  <button>Editar</button>
+                </a>
+              </div>
 
-            <div>
-              <a href="<?= BASE_URL ?>/livros/delete?id=<?= $livro->id ?>">
-                <button class="warning">Deletar</button>
-              </a>
-            </div>
+              <div>
+                <a href="<?= BASE_URL ?>/livros/delete?id=<?= $livro->id ?>">
+                  <button class="warning">Deletar</button>
+                </a>
+              </div>
 
+            </div>
           </td>
         </tr>
       <?php } ?>
