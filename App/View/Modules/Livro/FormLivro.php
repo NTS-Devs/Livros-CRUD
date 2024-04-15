@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <link rel="shortcut icon" href="<?= BASE_URL . "/View/Modules/Livro/Assets/favicon.ico" ?>" type="image/x-icon">
+  
   <title>Cadastro de Livros</title>
 
   <style>
