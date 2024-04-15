@@ -46,6 +46,6 @@ class LivroController {
     $model = new LivroModel();
     $model->delete((int)$_GET['id']);
 
-    header("Location: /Livro");
+    header("Location: /Site-Lweb/App/livros");
   }
 }

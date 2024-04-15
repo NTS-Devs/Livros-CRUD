@@ -27,7 +27,7 @@
     <h2>Cadastro de Livros</h2>
 
     <form method="post" action="<?= BASE_URL ?>/livros/form/save">
-      <input type="hidden" value="<?= $model->id ?>" name="id">
+      <input type="hidden" value="<?= $model->id ?>" name="id" id="id">
 
       <label for="titulo">Titulo: </label>
       <input value="<?= $model->titulo ?>" type="text" name="titulo" id="titulo" required>

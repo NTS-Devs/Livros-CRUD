@@ -10,7 +10,6 @@
   <style>
     body {
       width: 100vw;
-      height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -41,20 +40,20 @@
     <tbody>
       <?php foreach ($model->rows as $livro) { ?>
         <tr>
-          <td><?= $livro->ID ?></td>
+          <td><?= $livro->id ?></td>
           <td><?= $livro->titulo ?></td>
 
           <td><?= $livro->autor ?></td>
           <td><?= $livro->data_publicacao ?></td>
           <td class="grid">
             <div>
-              <a href="<?= BASE_URL ?>/livros/form?id=<?= $livro->ID ?>">
+              <a href="<?= BASE_URL ?>/livros/form?id=<?= $livro->id ?>">
                 <button>Editar</button>
               </a>
             </div>
 
             <div>
-              <a href="<?= BASE_URL ?>/livros/delete?id=<?= $livro->ID ?>">
+              <a href="<?= BASE_URL ?>/livros/delete?id=<?= $livro->id ?>">
                 <button class="warning">Deletar</button>
               </a>
             </div>
