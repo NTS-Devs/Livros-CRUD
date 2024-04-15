@@ -17,6 +17,10 @@ class LivroController {
     
     $model = new LivroModel();
 
+    if(isset($_GET['id'])){
+      $model = $model->getById((int) $_GET['id']);
+    }
+
     include 'View/Modules/Livro/FormLivro.php';
   }
 
@@ -25,6 +29,7 @@ class LivroController {
 
     $model = new LivroModel();
 
+    $model->id = $_POST['id'];
     $model->titulo = $_POST['titulo'];
     $model->autor = $_POST['autor'];
     $model->data_publicacao = $_POST['data'];
@@ -32,5 +37,15 @@ class LivroController {
     $model->save();
 
     header("Location: /Site-Lweb/App/livros");
+  }
+
+  public static function delete (){
+
+    include 'Model/LivroModel.php';
+
+    $model = new LivroModel();
+    $model->delete((int)$_GET['id']);
+
+    header("Location: /Livro");
   }
 }

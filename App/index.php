@@ -25,7 +25,7 @@ switch ($url) {
         break;
 
     case "/Site-Lweb/App/livros/delete":
-        echo "Deleta Livros";
+        LivroController::delete();
             break; 
     default:
         echo "Erro 404 - Rota não encontrada";
